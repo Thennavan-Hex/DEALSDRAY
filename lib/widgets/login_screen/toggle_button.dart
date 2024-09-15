@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toggle_switch/toggle_switch.dart';
+import 'package:dealsdray/widgets/opt_screen/otp_data.dart'; // Import the OtpData widget
 
 class CustomToggle extends StatefulWidget {
   const CustomToggle({super.key});
@@ -11,6 +12,18 @@ class CustomToggle extends StatefulWidget {
 class _CustomToggleState extends State<CustomToggle> {
   int _currentIndex = 1;
   final TextEditingController _controller = TextEditingController();
+
+  void _navigateToOtpData() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => OtpData(
+          inputValue: _controller.text,
+          isPhone: _currentIndex == 0,
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +73,7 @@ class _CustomToggleState extends State<CustomToggle> {
                     _currentIndex == 0
                         ? 'Please Provide Phone number'
                         : 'Please Provide Email address',
-                    style: TextStyle(fontSize: 16,color: Colors.grey.shade700),
+                    style: TextStyle(fontSize: 16, color: Colors.grey.shade700),
                   ),
                 ),
                 Container(
@@ -68,8 +81,7 @@ class _CustomToggleState extends State<CustomToggle> {
                   width: 250,
                   child: TextField(
                     controller: _controller,
-                    keyboardType:
-                    _currentIndex == 0 ? TextInputType.phone : TextInputType.emailAddress,
+                    keyboardType: _currentIndex == 0 ? TextInputType.phone : TextInputType.emailAddress,
                     decoration: InputDecoration(
                       border: UnderlineInputBorder(),
                       hintText: _currentIndex == 0 ? 'Phone' : 'Email',

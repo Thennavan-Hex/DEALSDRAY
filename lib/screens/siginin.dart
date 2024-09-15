@@ -1,18 +1,17 @@
-import 'package:dealsdray/widgets/login_screen//login_send.dart';
-import 'package:flutter/material.dart';
+import 'package:dealsdray/screens/login.dart';
 import 'package:dealsdray/widgets/back.dart';
 import 'package:dealsdray/widgets/deals_png.dart';
-import 'package:dealsdray/widgets/login_screen//toggle_button.dart'; // Import the ToggleButton widget
+import 'package:dealsdray/widgets/sigin_screen/sigin_text.dart';
+import 'package:flutter/material.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class Siginin extends StatefulWidget {
+  const Siginin({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Siginin> createState() => _SigininState();
 }
 
-class _LoginState extends State<Login> {
-
+class _SigininState extends State<Siginin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,8 +28,7 @@ class _LoginState extends State<Login> {
             },
           ),
           DealsPng(),
-          CustomToggle(),
-          LoginSend()
+          SiginText()
         ],
       ),
     );

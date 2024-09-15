@@ -61,7 +61,7 @@ class _OtpTimerState extends State<OtpTimer> {
           // Countdown Timer and "SEND AGAIN" button in a row
           Row(
             children: [
-              Padding(padding: EdgeInsets.only(left: 45)),
+              Padding(padding: EdgeInsets.only(left: 45,top: 30)),
               Text(
                 '${minutes.toString().padLeft(2, '0')}:${seconds.toString().padLeft(2, '0')}',
                 style: TextStyle(

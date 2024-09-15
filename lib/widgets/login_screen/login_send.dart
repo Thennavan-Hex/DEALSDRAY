@@ -1,3 +1,4 @@
+import 'package:dealsdray/screens/otp_verify.dart';
 import 'package:flutter/material.dart';
 
 class LoginSend extends StatefulWidget {
@@ -16,7 +17,12 @@ class _LoginSendState extends State<LoginSend> {
           width: 250,
           height: 50,
           child: TextButton(
-            onPressed: () {},
+            onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => OtpVerify()),
+                  );
+            },
             child: Text("SEND CODE"),
             style: TextButton.styleFrom(
               backgroundColor: Colors.red.shade200,
