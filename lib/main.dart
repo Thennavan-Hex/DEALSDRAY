@@ -1,3 +1,4 @@
+import 'package:dealsdray/screens/dashboard.dart';
 import 'package:dealsdray/screens/login.dart';
 import 'package:dealsdray/screens/otp_verify.dart';
 import 'package:dealsdray/screens/siginin.dart';
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:Siginin(),
+      home:Dashboard(),
     );
   }
 }
