@@ -7,7 +7,7 @@ class Offers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.cyan.shade400,
-      margin: EdgeInsets.only(top: 10), // Adjust top margin as needed
+      margin: const EdgeInsets.only(top: 5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -29,16 +29,14 @@ class Offers extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Container(
-            height: 300,
+            height: 250,
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.only(left: 10),
               child: Row(
                 children: [
-                  _buildImageContainer('assets/deals_icon.png'),
-                  _buildImageContainer('assets/deals_icon.png'),
-                  _buildImageContainer('assets/deals_icon.png'),
-                  _buildImageContainer('assets/deals_icon.png'),
+                  _buildOfferCard('assets/nokia.jpg', 'Nokia 8.1(iron, 64 GB)', '32% Off'),
+                  _buildOfferCard('assets/realme.jpeg', 'Redmi 9 Sapphire', '14% Off'),
                 ],
               ),
             ),
@@ -48,17 +46,79 @@ class Offers extends StatelessWidget {
     );
   }
 
-  Widget _buildImageContainer(String imagePath) {
+  // Widget for individual offer card
+  Widget _buildOfferCard(String imagePath, String offerText, String discountText) {
     return Container(
       margin: const EdgeInsets.only(right: 10),
-      child: ClipRRect(
+      width: 180,
+      height: 250,
+      decoration: BoxDecoration(
+        color: Colors.white,
         borderRadius: BorderRadius.circular(10),
-        child: Image.asset(
-          imagePath,
-          height: 300, // Height of the images
-          width: 200, // Width of the images
-          fit: BoxFit.cover,
-        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Stack(
+            children: [
+              ClipRRect(
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                ),
+                child: Image.asset(
+                  imagePath,
+                  fit: BoxFit.fill,
+                  width: 90,
+                  height: 160,
+                ),
+              ),
+              // Discount Badge
+              Positioned(
+                top: 10,
+                left: 25,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Text(
+                    discountText,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          // Offer Text
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+            child: Text(
+              offerText,
+              style: const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                color: Colors.black87,
+              ),
+              textAlign: TextAlign.center,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ],
       ),
     );
   }

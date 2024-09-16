@@ -7,17 +7,16 @@ class Chat extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton.extended(
       onPressed: () {
-        // Handle chat button press
         print('Chat button pressed');
       },
       label: Row(
-        mainAxisSize: MainAxisSize.min, // Adjusts the size of the row to fit its content
+        mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset(
-            'assets/chat.png', // Use Image.asset for custom icons
+            'assets/chat.png',
             color: Colors.white,
-            height: 24, // Adjust the height to fit well within the button
-            width: 24,  // Adjust the width if needed
+            height: 24,
+            width: 24,
           ),
           SizedBox(width: 8),
           Text(
@@ -28,7 +27,7 @@ class Chat extends StatelessWidget {
       ),
       backgroundColor: Colors.red.shade700,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(25), // Beveled corners
+        borderRadius: BorderRadius.circular(25),
       ),
     );
   }

@@ -1,9 +1,9 @@
-import 'package:dealsdray/screens/login.dart'; // Ensure this path is correct
+import 'package:dealsdray/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:dealsdray/widgets/opt_screen/otp_info.dart';
 import 'package:dealsdray/widgets/opt_screen/otp_input.dart';
-import 'package:dealsdray/widgets/opt_screen/otp_data.dart'; // Import OtpData
-import 'package:dealsdray/widgets/back_button.dart'; // Import Back
+import 'package:dealsdray/widgets/opt_screen/otp_data.dart';
+import 'package:dealsdray/widgets/back_button.dart';
 
 class OtpVerify extends StatefulWidget {
   const OtpVerify({super.key});
@@ -28,14 +28,14 @@ class _OtpVerifyState extends State<OtpVerify> {
               );
             },
           ),
-          OtpText(),
+          OtpText(), //Otp Data
           OtpData(
             inputValue: "We have sent a unique OTP number\n"
                 "to your mobile:",
-            isPhone: true, // Replace with actual toggle state
+            isPhone: true,
           ),
-          OtpTimer(),
-          SizedBox(height: 20), // Add spacing if needed
+          OtpTimer(), //Otp Timers
+          SizedBox(height: 20)
         ],
       ),
     );

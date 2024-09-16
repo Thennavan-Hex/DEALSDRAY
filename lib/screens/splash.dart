@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:math';
 import 'package:dealsdray/screens/login.dart';
+import 'package:dealsdray/service/splash_api.dart';
+import 'package:dealsdray/service/device_info.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -24,7 +26,10 @@ class _SplashScreenState extends State<SplashScreen>
       vsync: this,
     )..repeat(); // Repeat the animation
 
-    // Navigate to the login screen after a short delay
+    DeviceInfoHelper.getDeviceData().then((data) {
+      SplashApi.sendDeviceData(data); // Pass data to your API method
+    });
+
     Future.delayed(const Duration(seconds: 1), () { // Reduced delay
       Navigator.pushReplacement(
         context,
@@ -37,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   void dispose() {
-    _controller.dispose(); // Dispose of the controller
+    _controller.dispose();
     super.dispose();
   }
 
@@ -46,7 +51,6 @@ class _SplashScreenState extends State<SplashScreen>
     return Scaffold(
       body: Stack(
         children: [
-          // Background image
           Center(
             child: Image.asset(
               'assets/splash.png',
@@ -55,7 +59,6 @@ class _SplashScreenState extends State<SplashScreen>
               width: double.infinity,
             ),
           ),
-          // Rotating animation
           Center(
             child: AnimatedBuilder(
               animation: _controller,

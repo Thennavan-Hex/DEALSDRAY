@@ -12,7 +12,7 @@ class Ad extends StatelessWidget {
           imagePath,
           height: height,
           width: width,
-          fit: BoxFit.cover, // Use BoxFit.cover to avoid stretching
+          fit: BoxFit.cover,
         ),
       ),
     );
@@ -31,7 +31,6 @@ class Ad extends StatelessWidget {
             buildImageContainer('assets/realme.jpg', 200, 300),
             buildImageContainer('assets/realme.jpg', 200, 300),
             buildImageContainer('assets/realme.jpg', 200, 300),
-            // Add more images as needed
           ],
         ),
       ),

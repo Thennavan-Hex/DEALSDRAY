@@ -14,9 +14,7 @@ class _BottomNavState extends State<BottomNav> {
     setState(() {
       _selectedIndex = index;
     });
-    // Handle item tap
     print('Selected index: $index');
-    // You can navigate to different pages or handle other actions here
   }
 
   @override
@@ -24,7 +22,7 @@ class _BottomNavState extends State<BottomNav> {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       backgroundColor: Colors.white,
-      selectedItemColor: Colors.red, // Set selected item color to red
+      selectedItemColor: Colors.red,
       unselectedItemColor: Colors.grey,
       currentIndex: _selectedIndex,
       showUnselectedLabels: true,

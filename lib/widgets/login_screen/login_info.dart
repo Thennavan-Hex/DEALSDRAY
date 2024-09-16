@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:toggle_switch/toggle_switch.dart';
-import 'package:dealsdray/widgets/opt_screen/otp_data.dart'; // Import the OtpData widget
 
 class CustomToggle extends StatefulWidget {
   final void Function(String otp, String deviceId, String userId) onSubmit;
@@ -17,8 +16,8 @@ class _CustomToggleState extends State<CustomToggle> {
 
   void _handleSubmit() {
     final inputValue = _controller.text;
-    final deviceId = '62b43472c84bb6dac82e0504'; // Replace with actual device ID
-    final userId = '62b43547c84bb6dac82e0525'; // Replace with actual user ID
+    final deviceId = '62b43472c84bb6dac82e0504'; // Sample ID
+    final userId = '62b43547c84bb6dac82e0525'; // Sample ID
 
     widget.onSubmit(inputValue, deviceId, userId);
   }
@@ -84,14 +83,10 @@ class _CustomToggleState extends State<CustomToggle> {
                       border: UnderlineInputBorder(),
                       hintText: _currentIndex == 0 ? 'Phone' : 'Email',
                     ),
-                    maxLines: 1, // Single line input
+                    maxLines: 1,
                   ),
                 ),
                 SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: _handleSubmit,
-                  child: Text('Submit'),
-                ),
               ],
             ),
           ),

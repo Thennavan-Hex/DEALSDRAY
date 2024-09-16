@@ -18,7 +18,7 @@ class _OtpTimerState extends State<OtpTimer> {
         (_) => TextEditingController(),
   );
 
-  final String _dummyOtp = '1234'; // Predefined OTP
+  final String _dummyOtp = '1234'; // Sample OTP to check
 
   @override
   void initState() {
@@ -48,17 +48,14 @@ class _OtpTimerState extends State<OtpTimer> {
   }
 
   void _verifyOtp() {
-    // Collect the OTP from controllers
     final otp = _controllers.map((controller) => controller.text).join();
 
     if (otp == _dummyOtp) {
-      // Navigate to the dashboard if OTP matches
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const Dashboard()),
       );
     } else {
-      // Show error message
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: const Text('Invalid OTP try 1234')),
       );
@@ -85,7 +82,6 @@ class _OtpTimerState extends State<OtpTimer> {
             ),
           ),
           SizedBox(height: 20),
-          // Countdown Timer and "SEND AGAIN" button in a row
           Row(
             children: [
               Padding(padding: EdgeInsets.only(left: 45, top: 30)),
@@ -96,10 +92,9 @@ class _OtpTimerState extends State<OtpTimer> {
                   color: Colors.black,
                 ),
               ),
-              Spacer(), // Takes up remaining space
+              Spacer(),
               TextButton(
                 onPressed: () {
-                  // Logic for resend OTP
                   print("Resend OTP");
                 },
                 child: Text(
@@ -130,19 +125,17 @@ class _OtpTimerState extends State<OtpTimer> {
         keyboardType: TextInputType.number,
         decoration: InputDecoration(
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10), // Rounded corners
+            borderRadius: BorderRadius.circular(10),
           ),
-          counterText: '', // Removes the counter
+          counterText: '',
         ),
         onChanged: (text) {
-          // Automatically move to the next field when the current one is filled
           if (text.length == 1 && index < 3) {
             FocusScope.of(context).nextFocus();
           }
 
-          // Check if all fields are filled
           if (_controllers.every((controller) => controller.text.length == 1)) {
-            _verifyOtp(); // Verify OTP when all fields are filled
+            _verifyOtp();
           }
         },
       ),

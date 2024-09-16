@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Back extends StatelessWidget {
-  final VoidCallback onPressed; // Parameter for navigation
+  final VoidCallback onPressed;
 
-  const Back({super.key, required this.onPressed}); // Constructor with parameter
+  const Back({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class Back extends StatelessWidget {
       padding: EdgeInsets.only(left: 15, top: 40),
       child: IconButton(
         icon: Icon(Icons.arrow_back_ios_new),
-        onPressed: onPressed, // Use the parameter for navigation
+        onPressed: onPressed,
       ),
     );
   }

@@ -19,10 +19,10 @@ class Dashboard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Ad(), // Ad widget
-            Kyc(), // KYC widget
-            Device(), // Device widget
-            Offers(), // Offers widget
+            Ad(), // AD or Banners
+            Kyc(), // KYC Pending
+            Device(), // Device List widget
+            Offers(), // Offers Phones widget
           ],
         ),
       ),

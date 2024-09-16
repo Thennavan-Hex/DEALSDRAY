@@ -28,9 +28,9 @@ class _SigininState extends State<Siginin> {
               );
             },
           ),
-          DealsPng(),
-          SignInText(),
-          SigninSend(),
+          DealsPng(), //Images
+          SignInText(), //SignIn Info
+          SigninSend(), //Sign Submit
         ],
       ),
     );

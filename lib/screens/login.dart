@@ -3,7 +3,7 @@ import 'package:dealsdray/widgets/login_screen/login_button.dart';
 import 'package:dealsdray/widgets/back_button.dart';
 import 'package:dealsdray/widgets/deals_png.dart';
 import 'package:dealsdray/widgets/login_screen/login_info.dart';
-import 'package:dealsdray/service/login_api.dart'; // Import your API file
+import 'package:dealsdray/service/login_api.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -34,9 +34,9 @@ class _LoginState extends State<Login> {
               );
             },
           ),
-          DealsPng(),
-          CustomToggle(onSubmit: _handleSubmit),
-          LoginSend()
+          DealsPng(), // Images
+          CustomToggle(onSubmit: _handleSubmit), //Login Input
+          LoginSend() // Login Submit
         ],
       ),
     );

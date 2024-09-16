@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
       home: const SplashScreen(),
       routes: {
         '/login': (context) => const Login(),
-        // Add more routes here as needed
       },
     );
   }
