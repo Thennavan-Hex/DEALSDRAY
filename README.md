@@ -1,16 +1,28 @@
-# dealsdray
+# DEALSDRAY
 
-A new Flutter project.
+This repository contains the completed task for the Flutter Developer internship application. The code has been uploaded to GitHub as requested.
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+To install the latest version of the DEALSDRAY app:
 
-A few resources to get you started if this is your first Flutter project:
+1. **Download the Latest Release:**
+   You can download the APK file from the [latest release page](https://github.com/Thennavan-Hex/DEALSDRAY/releases/tag/v1.0.0).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. **Google Drive Link:**
+   Additionally, the video demonstrating the task is available for download from [Google Drive](https://drive.google.com/drive/folders/19Pey653ua20jEqI5Ri79mYhbXNmtsSn8?usp=sharing).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Code Submission
+
+The source code for this project is available in this repository.
+
+## Contact
+
+For any queries or additional information, please feel free to contact me at [thennavan.dev@gmail.com].
+
+---
+
+Thank you for considering my application.
+
+Best Regards,  
+Thennavan
