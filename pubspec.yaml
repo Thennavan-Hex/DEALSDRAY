@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_timer_countdown: ^1.0.7
   toggle_switch: ^2.3.0
+  shared_preferences: ^2.3.2
+  http: ^1.2.2
 
 dev_dependencies:
   flutter_test:

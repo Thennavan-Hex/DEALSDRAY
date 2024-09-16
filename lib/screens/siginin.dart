@@ -1,8 +1,8 @@
 import 'package:dealsdray/screens/login.dart';
-import 'package:dealsdray/widgets/back.dart';
+import 'package:dealsdray/widgets/back_button.dart';
 import 'package:dealsdray/widgets/deals_png.dart';
-import 'package:dealsdray/widgets/sigin_screen/sigin_send.dart';
-import 'package:dealsdray/widgets/sigin_screen/sigin_text.dart';
+import 'package:dealsdray/widgets/sigin_screen/sigin_button.dart';
+import 'package:dealsdray/widgets/sigin_screen/siginin_info.dart';
 import 'package:flutter/material.dart';
 
 class Siginin extends StatefulWidget {

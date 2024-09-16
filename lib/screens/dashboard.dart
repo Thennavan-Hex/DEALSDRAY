@@ -1,10 +1,10 @@
 import 'package:dealsdray/widgets/dashboard/bottom_nav.dart';
-import 'package:dealsdray/widgets/dashboard/chat.dart';
+import 'package:dealsdray/widgets/dashboard/chat_button.dart';
 import 'package:flutter/material.dart';
-import 'package:dealsdray/widgets/dashboard/ad.dart';
-import 'package:dealsdray/widgets/dashboard/device.dart';
-import 'package:dealsdray/widgets/dashboard/offers.dart';
-import 'package:dealsdray/widgets/dashboard/kyc.dart';
+import 'package:dealsdray/widgets/dashboard/ad_slides.dart';
+import 'package:dealsdray/widgets/dashboard/device_options.dart';
+import 'package:dealsdray/widgets/dashboard/offers_list.dart';
+import 'package:dealsdray/widgets/dashboard/kyc_verify.dart';
 import 'package:dealsdray/widgets/dashboard/dashboard_appbar.dart';
 
 class Dashboard extends StatelessWidget {

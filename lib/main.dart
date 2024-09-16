@@ -1,10 +1,10 @@
-import 'package:dealsdray/screens/dashboard.dart';
-import 'package:dealsdray/screens/login.dart';
-import 'package:dealsdray/screens/otp_verify.dart';
-import 'package:dealsdray/screens/siginin.dart';
 import 'package:flutter/material.dart';
+import 'package:dealsdray/screens/splash.dart';
+import 'package:dealsdray/screens/login.dart';
 
-void main()=>runApp(const MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,7 +13,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:Dashboard(),
+      title: 'DealsDray',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: const SplashScreen(),
+      routes: {
+        '/login': (context) => const Login(),
+        // Add more routes here as needed
+      },
     );
   }
 }

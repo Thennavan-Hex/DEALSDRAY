@@ -46,7 +46,7 @@ class _BottomNavState extends State<BottomNav> {
           label: 'Cart',
         ),
         BottomNavigationBarItem(
-          icon: _buildIcon('assets/account.png', 4),
+          icon: _buildIcon('assets/profile.png', 4),
           label: 'Profile',
         ),
       ],
