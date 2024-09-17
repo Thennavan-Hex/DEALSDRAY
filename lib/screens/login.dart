@@ -1,3 +1,4 @@
+import 'package:dealsdray/screens/siginin.dart';
 import 'package:flutter/material.dart';
 import 'package:dealsdray/widgets/login_screen/login_button.dart';
 import 'package:dealsdray/widgets/back_button.dart';
@@ -30,7 +31,7 @@ class _LoginState extends State<Login> {
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => Login()),
+                MaterialPageRoute(builder: (context) => Siginin()),
               );
             },
           ),
